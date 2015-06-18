@@ -3,6 +3,7 @@
  */
 Meteor.subscribe('posts');
 Meteor.subscribe('comments');
+Meteor.subscribe('userData');
 
 Template.post_list.helpers({
     posts: function() {

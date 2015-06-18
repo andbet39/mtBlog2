@@ -54,16 +54,23 @@
 </template>
 
 <template name="comment">
-    <div class="row">
+    <div class="row commentrow">
         <div class="col-md-12">
-            <p>Comment from : {{ownerInfo.profile.name}}</p>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Comment from : {{ownerInfo.profile.name}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    {{this.comment}}
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8">
-          {{this.comment}}
-        </div>
-    </div>
+
 </template>
 
 <template name="comment_form">
