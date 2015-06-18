@@ -1,0 +1,64 @@
+
+
+<template name="project_list">
+
+<h2>Available projects</h2>
+  {{#each projects}}
+    <a href="/project/{{_id}}">{{title}}</a>
+  {{/each}}
+
+</template>
+
+
+<template name="project">
+    <h2>{{title}}</h2> {{tasks.length}} Tasks
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                {{#each indexedArray tasks}}
+                    {{>project_task}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form class="form-task">
+                <div class="form-group">
+                    <label for="title">Task title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Enter task title">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" rows="10"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default add-task">Insert</button>
+            </form>
+        </div>
+    </div>
+
+</template>
+
+
+<template name="project_task">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{_index}}" aria-expanded="false" aria-controls="collapse{{_index}}">
+                    {{title}}
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{_index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                    {{description}}
+            </div>
+            <div class="panel-footer">
+                <h5>Owner</h5>
+                  Terzani Andrea <button class="btn btn-success btn-circle">Take</button>
+                <h5>Completition</h5>
+                    60%
+                <h5>Note</h5>
+            </div>
+        </div>
+    </div>
+</template>

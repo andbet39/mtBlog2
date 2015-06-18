@@ -1,0 +1,9 @@
+/* CSS declarations go here */
+
+html, button, input, textarea, select {
+    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
