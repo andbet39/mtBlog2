@@ -1,6 +1,6 @@
 Router.configure({
     // the default layout
-    layoutTemplate: 'layout1'
+    layoutTemplate: 'blogLayout'
 });
 
 
