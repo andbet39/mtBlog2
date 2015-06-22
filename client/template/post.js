@@ -46,3 +46,10 @@ Template.comment_form.events({
 
     }
 });
+
+Template.post.rendered = function(){
+    console.log('rendered');
+    var editor = new MediumEditor('.editable', {
+
+    });
+};

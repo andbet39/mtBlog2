@@ -10,3 +10,5 @@ mrt:bootstrap-3
 iron:router
 accounts-password
 accounts-ui
+accounts-facebook
+manuelschoebel:wait-on-lib

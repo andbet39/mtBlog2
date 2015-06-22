@@ -2,7 +2,7 @@
  * Created by andreaterzani on 29/05/15.
  */
 
-Template.layout1.events({
+Template.adminLayout.events({
 
     'submit .login-form':function(event){
         event.preventDefault();
