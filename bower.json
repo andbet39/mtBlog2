@@ -1,0 +1,6 @@
+{
+  "name" :"meteor Blog 2",
+  "directory": "public/bower_components/",
+  "analytics": false,
+  "timeout": 120000
+}

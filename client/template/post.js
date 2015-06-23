@@ -52,7 +52,7 @@ Template.comment_form.events({
 
 Template.post.events({
    'click .save-button':function(event){
-        event.preventDefault();
+        //event.preventDefault();
         var edit = editor.serialize();
         var post= {content:edit['element-0'].value};
 
@@ -63,13 +63,12 @@ Template.post.events({
 
 Template.post.rendered = function() {
 
-    if (Meteor.userId()) {
         console.log('rendered');
+
         editor = new MediumEditor('.editable', {});
-    }
-    console.log(editor.serialize());
-/*
-    this.find('.editable').mediumInsert({
-        editor: editor
-    });*/
+
+        $('.editable').mediumInsert({
+            editor: editor
+        });
+
 };
